@@ -1,4 +1,4 @@
-name: Build MT7621
+name: Build MT7621-K2P
 
 on: 
   release:
@@ -35,7 +35,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: "K2P NEWIFI-D1"
+        TNAME: "K2P"
       run: |
         cwd=`pwd`
         CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
@@ -106,5 +106,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Padavan-MT7621
+        name: Padavan-MT7621-K2P
         path: /opt/images
