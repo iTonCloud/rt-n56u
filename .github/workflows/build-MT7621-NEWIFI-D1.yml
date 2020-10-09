@@ -1,4 +1,4 @@
-name: Build MT7621
+name: Build MT7621-NEWIFI-D1
 
 on: 
   release:
@@ -106,5 +106,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Padavan-MT7621
+        name: Padavan-MT7621-NEWIFI-D1
         path: /opt/images
