@@ -1,4 +1,4 @@
-name: Build MT7620-PSG1208
+name: Build MT7620-YK-L1
 
 on: 
   release:
@@ -35,7 +35,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: "PSG1208"
+        TNAME: "YK-L1"
       run: |
         cwd=`pwd`
         CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
@@ -103,5 +103,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Padavan-MT7620-PSG1208
+        name: Padavan-MT7620-YK-L1
         path: /opt/images
