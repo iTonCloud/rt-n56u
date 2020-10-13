@@ -1,4 +1,4 @@
-name: Build MT7620
+name: Build MT7620-PSG1208
 
 on: 
   release:
@@ -103,5 +103,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Padavan-MT7620
+        name: Padavan-MT7620-PSG1208
         path: /opt/images
